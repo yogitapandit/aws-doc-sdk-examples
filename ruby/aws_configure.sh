@@ -7,4 +7,5 @@ export AWS_SECRET_ACCESS_KEY=$(grep "aws_secret_access_key" .aws/credentials | c
 export AWS_SESSION_TOKEN=$(grep "aws_session_token" .aws/credentials | cut -d "=" -f 2)
 
 # Usage example:
-#     docker run -e AWS_CREDENTIALS="$(cat ~/.aws/credentials)" -it rubytest8
+#     docker build -f ruby/ruby.Dockerfile -t <TAGNAME> .
+#     docker run -e AWS_CREDENTIALS="$(cat ~/.aws/credentials)" -e AWS_CONFIG="$(cat ~/.aws/config)" -it <TAGNAME>
