@@ -149,6 +149,21 @@ cloudfront:
   tags:
     product_categories: {'Networking &amp; Content Delivery'}
   version: cloudfront-2020-05-31
+cloudtrail:
+  long: '&CTlong;'
+  short: '&CT;'
+  sort: CloudTrail
+  expanded:
+    long: Amazon CloudTrail
+    short: CloudTrail
+  blurb: helps you enable operational and risk auditing, governance, and compliance of your AWS account.
+  guide:
+    subtitle: Developer Guide
+    url: awscloudtrail/latest/userguide/cloudtrail-user-guide.html
+  api_ref: awscloudtrail/latest/APIReference/Welcome.html
+  tags:
+    product_categories: {'Management &amp; Governance'}
+  version: cloudtrail-2023-03-14
 cloudwatch:
   long: '&CWlong;'
   short: '&CW;'

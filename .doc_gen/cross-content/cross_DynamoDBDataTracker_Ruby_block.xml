@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "file://zonbook/docbookx.dtd"[
+    <!ENTITY % phrases-shared SYSTEM "file://AWSShared/common/phrases-shared.ent">
+    %phrases-shared;
+]>
+<block>
+    <para>
+        Shows how to use the &Rubylong; to create a REST service that tracks work
+        items in &DDBlong; and emails reports by using &SESlong; (&SES;).
+        This example uses the Sinatra web framework to handle HTTP routing and integrates
+        with a React webpage to present a fully functional web application.
+    </para>
+
+    <itemizedlist>
+        <listitem><para>Build a Sinatra REST service that integrates with &AWS-services;.</para></listitem>
+        <listitem><para>Read, write, and update work items that are stored in a &DDB; table.</para></listitem>
+        <listitem><para>Use &SES; to send email reports of work items.</para></listitem>
+    </itemizedlist>
+    <para>
+        For complete source code and instructions on how to set up and run, see the full example in the
+        <ulink url="https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/ruby/cross_service/item_tracker">&AWS; Code Examples Repository</ulink>
+        on GitHub.
+    </para>
+</block>
