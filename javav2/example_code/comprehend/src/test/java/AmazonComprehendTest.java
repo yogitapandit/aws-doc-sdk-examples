@@ -15,9 +15,7 @@ public class AmazonComprehendTest {
     private static  ComprehendClient comClient;
     private static String text = "Amazon.com, Inc. is located in Seattle, WA and was founded July 5th, 1994 by Jeff Bezos, allowing customers to buy everything from books to blenders. Seattle is north of Portland and south of Vancouver, BC. Other notable Seattle - based companies are Starbucks and Boeing" ;
     private static String frText = "Il pleut aujourd'hui à Seattle" ;
-    private static String dataAccessRoleArn;
     private static String s3Uri;
-    private static String documentClassifierName;
 
     @BeforeAll
     public static void setUp() throws IOException {
@@ -42,9 +40,7 @@ public class AmazonComprehendTest {
             prop.load(input);
 
             // Populate the data members required for all tests
-             dataAccessRoleArn = prop.getProperty("dataAccessRoleArn");
             s3Uri = prop.getProperty("s3Uri");
-            documentClassifierName = prop.getProperty("documentClassifier");
 
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -103,12 +99,4 @@ public class AmazonComprehendTest {
         DetectSyntax.detectAllSyntax(comClient, text);
         System.out.println("Test 6 passed");
     }
-
-//     @Test
-//     @Order(7)
-//     public void DocumentClassifierDemo() {
-
-//       DocumentClassifierDemo.createDocumentClassifier(comClient, dataAccessRoleArn, s3Uri, documentClassifierName);
-//      System.out.println("Test 7 passed");
-//     }
 }
