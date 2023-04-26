@@ -51,6 +51,7 @@ public class AmazonComprehendTest {
         }
     }
 
+    @Integ
     @Test
     @Order(1)
     public void whenInitializingAWSService_thenNotNull() {
@@ -58,6 +59,7 @@ public class AmazonComprehendTest {
         System.out.println("Test 1 passed");
     }
 
+    @Integ
     @Test
     @Order(2)
     public void DetectEntities() {
@@ -66,6 +68,7 @@ public class AmazonComprehendTest {
         System.out.println("Test 2 passed");
     }
 
+    @Integ
     @Test
     @Order(3)
     public void DetectKeyPhrases() {
@@ -74,6 +77,7 @@ public class AmazonComprehendTest {
         System.out.println("Test 3 passed");
     }
 
+    @Integ
     @Test
     @Order(4)
     public void DetectLanguage() {
@@ -82,6 +86,7 @@ public class AmazonComprehendTest {
         System.out.println("Test 4 passed");
     }
 
+    @Integ
     @Test
     @Order(5)
     public void DetectSentiment() {
@@ -90,6 +95,7 @@ public class AmazonComprehendTest {
         System.out.println("Test 5 passed");
     }
 
+    @Integ
     @Test
     @Order(6)
     public void DetectSyntax() {
