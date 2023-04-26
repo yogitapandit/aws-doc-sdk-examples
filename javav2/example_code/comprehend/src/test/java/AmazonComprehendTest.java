@@ -15,7 +15,6 @@ public class AmazonComprehendTest {
     private static  ComprehendClient comClient;
     private static String text = "Amazon.com, Inc. is located in Seattle, WA and was founded July 5th, 1994 by Jeff Bezos, allowing customers to buy everything from books to blenders. Seattle is north of Portland and south of Vancouver, BC. Other notable Seattle - based companies are Starbucks and Boeing" ;
     private static String frText = "Il pleut aujourd'hui à Seattle" ;
-    private static String s3Uri;
 
     @BeforeAll
     public static void setUp() throws IOException {
