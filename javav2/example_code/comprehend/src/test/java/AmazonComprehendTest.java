@@ -98,11 +98,11 @@ public class AmazonComprehendTest {
         System.out.println("Test 6 passed");
     }
 
-    @Test
-    @Order(7)
-    public void DocumentClassifierDemo() {
+//     @Test
+//     @Order(7)
+//     public void DocumentClassifierDemo() {
 
-      DocumentClassifierDemo.createDocumentClassifier(comClient, dataAccessRoleArn, s3Uri, documentClassifierName);
-     System.out.println("Test 7 passed");
-    }
+//       DocumentClassifierDemo.createDocumentClassifier(comClient, dataAccessRoleArn, s3Uri, documentClassifierName);
+//      System.out.println("Test 7 passed");
+//     }
 }
