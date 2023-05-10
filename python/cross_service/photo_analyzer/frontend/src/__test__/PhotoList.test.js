@@ -50,8 +50,8 @@ describe("photo list module", () => {
 
   test('upload file', async () => {
     const testImage = new File(
-      [new Blob(['test-image'], {type: 'image/png'})],
-      'test-image.png');
+      [new Blob(['spec-image'], {type: 'image/png'})],
+      'spec-image.png');
 
     $.get.mockImplementation(() => {
       return $.Deferred().resolve();
@@ -82,8 +82,8 @@ describe("photo list module", () => {
   test('render upload error', async () => {
     const uploadError = "Test upload error.";
     const testImage = new File(
-      [new Blob(['test-image'], {type: 'image/png'})],
-      'test-image.png');
+      [new Blob(['spec-image'], {type: 'image/png'})],
+      'spec-image.png');
 
     $.get.mockImplementation(() => {
       return $.Deferred().resolve();

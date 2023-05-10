@@ -19,9 +19,9 @@ device-farm_Scenario_BrowserTesting:
   services:
     device-farm: {CreateTestGridUrl, GetTestGridSession}
 device-farm_Scenario_DeviceTesting:
-  title: Upload and test mobile device packages with &ATP; using an &AWS; SDK
-  title_abbrev: Upload and test device packages
-  synopsis: upload and test mobile device packages with &ATP;.
+  title: Upload and spec mobile device packages with &ATP; using an &AWS; SDK
+  title_abbrev: Upload and spec device packages
+  synopsis: upload and spec mobile device packages with &ATP;.
   category: Scenarios
   languages:
     Python:
@@ -30,8 +30,8 @@ device-farm_Scenario_DeviceTesting:
           github: python/example_code/devicefarm/device_testing
           sdkguide:
           excerpts:
-            - description: Upload compiled Android application and test packages to
-                &ATP;, start a test, wait for test completion, and report
+            - description: Upload compiled Android application and spec packages to
+                &ATP;, start a spec, wait for spec completion, and report
                 the results.
               snippet_tags:
                 - python.example_code.device-farm.Scenario_DeviceTesting

@@ -9,7 +9,7 @@ require "aws-sdk"
 # Replace us-west-2 with the AWS Region you're using for Amazon S3.
 if ARGV.length < 2
   puts "Usage: ruby s3.rb <the bucket name> <the AWS Region to use>\n" +
-    "Example: ruby s3.rb my-test-bucket us-west-2"
+    "Example: ruby s3.rb my-spec-bucket us-west-2"
 end
 
 bucket_name = ARGV[0]

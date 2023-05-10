@@ -280,7 +280,7 @@ device-farm:
   expanded:
     long: AWS Device Farm
     short: Device Farm
-  blurb: is an app testing service that enables you to test your iOS, Android and Fire OS apps on real, physical phones and tablets that are hosted by AWS.
+  blurb: is an app testing service that enables you to spec your iOS, Android and Fire OS apps on real, physical phones and tablets that are hosted by AWS.
   guide:
     subtitle: Developer Guide
     url: devicefarm/latest/developerguide/welcome.html

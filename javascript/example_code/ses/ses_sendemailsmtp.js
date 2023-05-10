@@ -70,7 +70,7 @@ const smtpPassword = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
 var configurationSet = "ConfigSet";
 
 // The subject line of the email
-var subject = "Amazon SES test (Nodemailer)";
+var subject = "Amazon SES spec (Nodemailer)";
 
 // The email body for recipients with non-HTML email clients.
 var body_text = `Amazon SES Test (Nodemailer)

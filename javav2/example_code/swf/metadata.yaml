@@ -15,6 +15,6 @@ files:
   - path: src/main/java/com/example/helloswf/WorkflowWorker.java
     services:
       - swf
-  - path: src/test/java/AmazonSimpleWorkflowTest.java
+  - path: src/spec/java/AmazonSimpleWorkflowTest.java
     services:
       - swf  

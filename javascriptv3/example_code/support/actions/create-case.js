@@ -25,7 +25,7 @@ export const main = async () => {
         // Use DescribeServices to find available category codes for each service.
         categoryCode: "end-user-support",
         // The main description of the support case. 
-        communicationBody: "This is a test. Please ignore."
+        communicationBody: "This is a spec. Please ignore."
       })
     );
     console.log(response.caseId);

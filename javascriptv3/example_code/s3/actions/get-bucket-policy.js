@@ -12,7 +12,7 @@ const client = new S3Client({});
 
 export const main = async () => {
   const command = new GetBucketPolicyCommand({
-    Bucket: "test-bucket",
+    Bucket: "spec-bucket",
   });
 
   try {

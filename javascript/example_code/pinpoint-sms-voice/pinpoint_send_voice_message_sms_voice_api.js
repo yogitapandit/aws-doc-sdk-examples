@@ -54,7 +54,7 @@ var voiceId = "Matthew";
 // certain aspects of the message, such as the volume or the speech rate.
 // The message can't contain any line breaks.
 var ssmlMessage = "<speak>"
-    + "This is a test message sent from <emphasis>Amazon Pinpoint</emphasis> "
+    + "This is a spec message sent from <emphasis>Amazon Pinpoint</emphasis> "
     + "using the <break strength='weak'/>AWS SDK for JavaScript in Node.js. "
     + "<amazon:effect phonation='soft'>Thank you for listening."
     + "</amazon:effect>"

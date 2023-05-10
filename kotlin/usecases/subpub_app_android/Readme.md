@@ -141,7 +141,7 @@ Add the following dependencies to the Gradle build file.
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.spec.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -175,8 +175,8 @@ Add the following dependencies to the Gradle build file.
      implementation 'com.google.android.material:material:1.4.0'
      implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
      testImplementation 'junit:junit:4.+'
-     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+     androidTestImplementation 'androidx.spec.ext:junit:1.1.3'
+     androidTestImplementation 'androidx.spec.espresso:espresso-core:3.4.0'
      }
 
 ```

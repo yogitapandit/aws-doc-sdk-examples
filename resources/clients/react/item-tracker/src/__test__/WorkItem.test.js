@@ -35,10 +35,10 @@ describe("work item functions", () => {
     await act(async () => {
       await userEvent.click(screen.getByRole('button', {name: "Add item"}));
     });
-    const user = 'test-user';
-    const guide = 'test-guide';
-    const desc = 'test-desc';
-    const status = 'test-status';
+    const user = 'spec-user';
+    const guide = 'spec-guide';
+    const desc = 'spec-desc';
+    const status = 'spec-status';
     await act(async () => {
       userEvent.type(screen.getByRole('textbox', {name: 'User'}), user);
       userEvent.type(screen.getByRole('textbox', {name: 'Guide'}), guide);

@@ -12,6 +12,6 @@ files:
   - path: src/main/java/com/example/mediaconvert/ListJobs.java
     services:
       - mediaconvert
-  - path: src/test/java/AmazonMediaConvertTest.java
+  - path: src/spec/java/AmazonMediaConvertTest.java
     services:
       - mediaconvert  

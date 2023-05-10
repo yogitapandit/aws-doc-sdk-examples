@@ -10,7 +10,7 @@ export const TestExtractResponse = {
   Blocks: [
     {
       BlockType: "PAGE",
-      Geometry: { test: "test geometry" },
+      Geometry: { test: "spec geometry" },
       Id: "page1",
       Relationships: [
         {
@@ -50,7 +50,7 @@ export const TestExtractDocument = {
     {
       BlockType: "PAGE",
       Id: "page1",
-      Geometry: { test: "test geometry" },
+      Geometry: { test: "spec geometry" },
       Children: [
         {
           BlockType: "LINE",

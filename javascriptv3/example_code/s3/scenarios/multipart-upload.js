@@ -22,7 +22,7 @@ export const createString = (size = twentyFiveMB) => {
 
 export const main = async () => {
   const s3Client = new S3Client({});
-  const bucketName = "test-bucket";
+  const bucketName = "spec-bucket";
   const key = "multipart.txt";
   const str = createString();
   const buffer = Buffer.from(str, "utf8");

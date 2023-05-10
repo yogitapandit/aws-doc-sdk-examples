@@ -15,6 +15,6 @@ files:
  - path: src/main/java/com/example/lambda/ListLambdaFunctions.java
    services:
      - lambda
- - path: src/test/java/LambdaTest.java
+ - path: src/spec/java/LambdaTest.java
    services:
      - lambda

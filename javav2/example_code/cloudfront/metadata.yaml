@@ -18,7 +18,7 @@ files:
   - path: src/main/java/com/example/cloudfront/ModifyDistribution.java
     services:
       - CloudFront
-  - path: src/test/java/CloudFrontTest.java
+  - path: src/spec/java/CloudFrontTest.java
     services:
       - CloudFront
         

@@ -16,10 +16,10 @@ describe("WorkItemService", () => {
   });
 
   it("builds a URL for the reports route", async () => {
-    await workItemService.mailItem("test@example.com");
+    await workItemService.mailItem("spec@example.com");
     expect(fetch).toHaveBeenCalledWith(
       "http://localhost:8080/api/items:report",
-      { method: "POST", body: JSON.stringify({ email: "test@example.com" }) }
+      { method: "POST", body: JSON.stringify({ email: "spec@example.com" }) }
     );
   });
 

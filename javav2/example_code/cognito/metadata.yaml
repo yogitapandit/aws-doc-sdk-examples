@@ -48,6 +48,6 @@ files:
   - path: src/main/java/com/example/cognito/ListUsers.java
     services:
       - cognito      
-  - path: src/test/java/AmazonCognitoTest.java
+  - path: src/spec/java/AmazonCognitoTest.java
     services:
       - cognito    

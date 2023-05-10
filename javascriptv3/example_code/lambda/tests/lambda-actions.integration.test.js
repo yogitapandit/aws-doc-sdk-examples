@@ -32,7 +32,7 @@ import { updateFunctionConfiguration } from "../actions/update-function-configur
 
 describe("Creating, getting, invoking, listing, updating, and deleting", () => {
   const iamClient = new IAMClient({ region: DEFAULT_REGION });
-  const roleName = "test-lambda-actions-role-name";
+  const roleName = "spec-lambda-actions-role-name";
   const rolePolicyArn =
     "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole";
   const funcName = "func-math";
@@ -90,7 +90,7 @@ describe("Creating, getting, invoking, listing, updating, and deleting", () => {
     }
 
     try {
-      // Ensure function gets deleted even if the test fails
+      // Ensure function gets deleted even if the spec fails
       // before the deletion step.
       await deleteFunction(funcName);
     } catch (err) {
@@ -147,7 +147,7 @@ describe("Creating, getting, invoking, listing, updating, and deleting", () => {
   // Ideally these should be separate tests, but since we're creating
   // real AWS resources, this saves on testing time and possibly
   // cost.
-  it("are all handled by this one test", async () => {
+  it("are all handled by this one spec", async () => {
     await testCreateFunction();
     await waitForFunctionActive({ FunctionName: funcName });
     await updateFunctionConfiguration(funcName);

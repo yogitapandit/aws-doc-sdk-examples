@@ -9,6 +9,6 @@ files:
  - path: src/main/java/com/example/guardduty/ListDetectors.java
    services:
      - guardduty
- - path: src/test/java/GuarddutyTest.java
+ - path: src/spec/java/GuarddutyTest.java
    services:
      - guardduty

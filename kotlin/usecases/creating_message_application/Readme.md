@@ -127,7 +127,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("aws.sdk.kotlin:sqs:0.17.1-beta")
     implementation("aws.sdk.kotlin:comprehend:0.17.1-beta")
-    testImplementation("org.springframework.boot:spring-boot-starter-test:2.7.3")
+    testImplementation("org.springframework.boot:spring-boot-starter-spec:2.7.3")
 }
 
 tasks.withType<KotlinCompile> {

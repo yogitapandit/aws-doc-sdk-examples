@@ -12,7 +12,7 @@ const client = new S3Client({});
 
 export const main = async () => {
   const command = new DeleteObjectsCommand({
-    Bucket: "test-bucket",
+    Bucket: "spec-bucket",
     Delete: {
       Objects: [{ Key: "object1.txt" }, { Key: "object2.txt" }],
     },

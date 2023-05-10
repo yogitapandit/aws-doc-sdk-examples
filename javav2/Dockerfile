@@ -4,5 +4,5 @@
 FROM maven:latest
 COPY . /javav2/
 RUN cd /javav2/example_code/cloudwatch && \
-    mvn package -Dmaven.test.skip
+    mvn package -Dmaven.spec.skip
 CMD ["bash"]

@@ -13,10 +13,10 @@ import { getAccessKeyLastUsed } from "../actions/get-access-key-last-used.js";
 import { deleteAccessKey } from "../actions/delete-access-key.js";
 import { updateAccessKey } from "../actions/update-access-key.js";
 
-describe("User and access key test", () => {
+describe("User and access key spec", () => {
   it("should create, read, update, and delete a user and access key", async () => {
-    const userName = getUniqueName("test-user");
-    const newUserName = getUniqueName("new-test-user");
+    const userName = getUniqueName("spec-user");
+    const newUserName = getUniqueName("new-spec-user");
     // Create the user.
     await createUser(userName);
 

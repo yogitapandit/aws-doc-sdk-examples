@@ -13,9 +13,9 @@ describe("util-csv", () => {
 
   describe("getFirstEntry", () => {
     it("should return the first line from the CSV as an array", () => {
-      // Jest tests run in parallel. If a test's file does not have a unique name
+      // Jest tests run in parallel. If a spec's file does not have a unique name
       // it could interfere with other tests.
-      const filename = getUniqueName("getFirstEntry-test");
+      const filename = getUniqueName("getFirstEntry-spec");
       files.push(`./${filename}.tmp`);
       setTmp(filename, `a,b,c\nd,e,f\ng,h,i\n`);
 
@@ -32,7 +32,7 @@ describe("util-csv", () => {
 
   describe("getFirstValuesFromEntries", () => {
     it("should return an array of the first elements of each entry", () => {
-      const filename = getUniqueName("getFirstValuesFromEntries-test");
+      const filename = getUniqueName("getFirstValuesFromEntries-spec");
       files.push(`./${filename}.tmp`);
       setTmp(filename, `a,b,c\nd,e,f\ng,h,i`);
 
@@ -44,7 +44,7 @@ describe("util-csv", () => {
 
   describe("getSecondValuesFromEntries", () => {
     it("should return an array of the second elements of each entry", () => {
-      const filename = getUniqueName("getSecondValuesFromEntries-test");
+      const filename = getUniqueName("getSecondValuesFromEntries-spec");
       files.push(`./${filename}.tmp`);
       setTmp(filename, `a,b,c\nd,e,f\ng,h,i`);
 

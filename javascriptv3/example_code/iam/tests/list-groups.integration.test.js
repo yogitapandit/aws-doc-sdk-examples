@@ -5,7 +5,7 @@ import { createGroup } from "../actions/create-group.js";
 import { deleteGroup } from "../actions/delete-group.js";
 
 describe("List groups", () => {
-  const groupName = getUniqueName("test-group");
+  const groupName = getUniqueName("spec-group");
 
   beforeAll(async () => {
     await createGroup(groupName);

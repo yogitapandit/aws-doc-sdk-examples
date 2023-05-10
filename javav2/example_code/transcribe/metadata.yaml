@@ -24,6 +24,6 @@ files:
  - path: src/main/java/com/amazonaws/transcribestreaming/TranscribeStreamingRetryClient.java
    services:
      - transcribe          
- - path: src/test/java/TranscribeTest.java
+ - path: src/spec/java/TranscribeTest.java
    services:
      - transcribe

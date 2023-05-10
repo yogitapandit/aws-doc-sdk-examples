@@ -39,6 +39,6 @@ files:
   - path: src/main/java/com/example/kms/SetKeyPolicy.java
     services:
       - kms       
-  - path: src/test/java/AmazonKMSTest.java
+  - path: src/spec/java/AmazonKMSTest.java
     services:
       - kms  

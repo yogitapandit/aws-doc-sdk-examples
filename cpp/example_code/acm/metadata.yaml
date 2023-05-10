@@ -1,5 +1,5 @@
 # Disregard this file. AWS uses it internally to 
-# track code coverage and unit test coverage 
+# track code coverage and unit spec coverage
 # within this repository.
 ---
 files:

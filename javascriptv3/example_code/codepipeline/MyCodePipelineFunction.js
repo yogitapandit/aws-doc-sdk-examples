@@ -67,12 +67,12 @@ exports.handler = function(event, context) {
     
     // Validate the URL passed in UserParameters
     if(!url || url.indexOf('http://') === -1) {
-        putJobFailure('The UserParameters field must contain a valid URL address to test, including http:// or https://');  
+        putJobFailure('The UserParameters field must contain a valid URL address to spec, including http:// or https://');
         return;
     }
     
     // Helper function to make a HTTP GET request to the page.
-    // The helper will test the response and succeed or fail the job accordingly 
+    // The helper will spec the response and succeed or fail the job accordingly
     var getPage = function(url, callback) {
         var pageObject = {
             body: '',

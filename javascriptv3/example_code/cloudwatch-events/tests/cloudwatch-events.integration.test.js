@@ -75,14 +75,14 @@ const deleteLogGroup = async (logGroupName) => {
   await cwlClient.send(command);
 };
 
-describe("CloudWatch Events integration test", () => {
-  const logGroupName = "test-log-group";
-  const ruleName = "test-rule";
+describe("CloudWatch Events integration spec", () => {
+  const logGroupName = "spec-log-group";
+  const ruleName = "spec-rule";
   const rulePattern = JSON.stringify({
     source: ["my.app"],
     "detail-type": ["My Custom Event"],
   });
-  const targetId = "test-target";
+  const targetId = "spec-target";
   let targetArn = "";
 
   beforeAll(async () => {

@@ -8,7 +8,7 @@
 // snippet-sourcetype:[full-example]
 // snippet-sourcedate:[ ]
 // snippet-sourceauthor:[AWS]
-// snippet-start:[dynamodb.javascript.trydax.04-query-test] 
+// snippet-start:[dynamodb.javascript.trydax.04-query-spec]
 
 /**
  * Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
@@ -74,4 +74,4 @@ for (var i = 0; i < iterations; i++) {
 
 }
 
-// snippet-end:[dynamodb.javascript.trydax.04-query-test] 
+// snippet-end:[dynamodb.javascript.trydax.04-query-spec]

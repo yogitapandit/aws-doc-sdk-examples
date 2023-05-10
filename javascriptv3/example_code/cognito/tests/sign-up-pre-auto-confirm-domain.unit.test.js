@@ -9,22 +9,22 @@ import { handler } from "../scenarios/lambda-triggers/functions/sign-up-pre-auto
 describe("sign-up-pre-auto-confirm-domain", () => {
   it("should auto confirm if the domain matches the target", async () => {
     const result = await handler({
-      request: { userAttributes: { email: "test@example.com" } },
+      request: { userAttributes: { email: "spec@example.com" } },
       response: {},
     });
     expect(result).toEqual({
-      request: { userAttributes: { email: "test@example.com" } },
+      request: { userAttributes: { email: "spec@example.com" } },
       response: { autoConfirmUser: true },
     });
   });
   
   it("should not auto confirm if the domain does not matches the target", async () => {
     const result = await handler({
-      request: { userAttributes: { email: "test@example.ca" } },
+      request: { userAttributes: { email: "spec@example.ca" } },
       response: {},
     });
     expect(result).toEqual({
-      request: { userAttributes: { email: "test@example.ca" } },
+      request: { userAttributes: { email: "spec@example.ca" } },
       response: { autoConfirmUser: false },
     });
   });

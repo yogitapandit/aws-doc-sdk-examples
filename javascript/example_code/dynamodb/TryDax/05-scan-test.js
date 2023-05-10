@@ -8,7 +8,7 @@
 // snippet-sourcetype:[full-example]
 // snippet-sourcedate:[ ]
 // snippet-sourceauthor:[AWS]
-// snippet-start:[dynamodb.javascript.trydax.05-scan-test]
+// snippet-start:[dynamodb.javascript.trydax.05-scan-spec]
 
 /**
  * Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
@@ -64,4 +64,4 @@ for (var i = 0; i < iterations; i++) {
 var endTime = new Date().getTime();
 console.log("\tTotal time: ", (endTime - startTime) , "ms - Avg time: ", (endTime - startTime) / iterations, "ms");
 
-// snippet-end:[dynamodb.javascript.trydax.05-scan-test]
+// snippet-end:[dynamodb.javascript.trydax.05-scan-spec]

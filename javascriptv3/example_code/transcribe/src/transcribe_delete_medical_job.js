@@ -5,7 +5,7 @@ ABOUT THIS NODE.JS EXAMPLE: This example works with the AWS SDK for JavaScript v
 which is available at https://github.com/aws/aws-sdk-js-v3.
 
 Purpose:
-transcribe_delete_medical_job.test.js demonstrates how to delete an Amazon Transcribe medical transcription job.
+transcribe_delete_medical_job.spec.js demonstrates how to delete an Amazon Transcribe medical transcription job.
 
 Inputs (replace in code):
 

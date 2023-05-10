@@ -101,7 +101,7 @@ export const createCase = async ({
 }) => {
   const command = new CreateCaseCommand({
     subject: "IGNORE: Test case",
-    communicationBody: "This is a test. Please ignore.",
+    communicationBody: "This is a spec. Please ignore.",
     serviceCode: selectedService.code,
     categoryCode: selectedCategory.code,
     severityCode: selectedSeverityLevel.code,

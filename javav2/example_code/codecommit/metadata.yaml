@@ -36,6 +36,6 @@ files:
  - path: src/main/java/com/example/commit/PutFile.java
    services:
      - codecommit3 
- - path: src/test/java/CodeCommitTest.java
+ - path: src/spec/java/CodeCommitTest.java
    services:
      - codecommit

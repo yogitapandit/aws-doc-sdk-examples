@@ -84,7 +84,7 @@ files:
  - path: src/main/java/com/example/rekognition/VideoPersonDetection.java
    services:
      - rekognition 
- - path: src/test/java/RekognitionTest.java
+ - path: src/spec/java/RekognitionTest.java
    services:
      - rekognition
 

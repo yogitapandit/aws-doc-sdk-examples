@@ -4,7 +4,7 @@ files:
    services:
      - lookoutvision
 
- - path: src/test/java/LookoutVisionTest.java
+ - path: src/spec/java/LookoutVisionTest.java
    services:
      - lookoutvision
 

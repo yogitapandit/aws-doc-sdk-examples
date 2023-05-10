@@ -1598,18 +1598,18 @@ dynamodb_Usage_DaxDemo:
             - description: Create a table with either the &DAX; or Boto3 client.
               snippet_tags:
                 - dynamodb.Python.TryDax.01-create-table
-            - description: Write test data to the table.
+            - description: Write spec data to the table.
               snippet_tags:
                 - dynamodb.Python.TryDax.02-write-data
             - description: Get items for a number of iterations for both the &DAX; client and the Boto3 client and report the time spent for each.
               snippet_tags:
-                - dynamodb.Python.TryDax.03-getitem-test
+                - dynamodb.Python.TryDax.03-getitem-spec
             - description: Query the table for a number of iterations for both the &DAX; client and the Boto3 client and report the time spent for each.
               snippet_tags:
-                - dynamodb.Python.TryDax.04-query-test
+                - dynamodb.Python.TryDax.04-query-spec
             - description: Scan the table for a number of iterations for both the &DAX; client and the Boto3 client and report the time spent for each.
               snippet_tags:
-                - dynamodb.Python.TryDax.05-scan-test
+                - dynamodb.Python.TryDax.05-scan-spec
             - description: Delete the table.
               snippet_tags:
                 - dynamodb.Python.TryDax.06-delete-table

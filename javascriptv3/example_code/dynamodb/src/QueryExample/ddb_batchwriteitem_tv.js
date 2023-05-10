@@ -5,12 +5,12 @@ SPDX-License-Identifier: Apache-2.0
 // https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/dynamodb-example-query-scan.html.
 
 Purpose:
-ddb_batchwriteitem_tv.test.js populates the table used for the match query example
+ddb_batchwriteitem_tv.spec.js populates the table used for the match query example
 https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/dynamodb-example-query-scan.html.
 
 
 Running the code:
-node ddb_batchwriteitem_tv.test.js
+node ddb_batchwriteitem_tv.spec.js
 */
 // snippet-start:[dynamodb.JavaScript.batch.BatchWriterItemTVV3]
 // Import required AWS SDK clients and commands for Node.js

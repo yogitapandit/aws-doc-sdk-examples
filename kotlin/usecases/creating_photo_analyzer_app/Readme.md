@@ -125,7 +125,7 @@ Add the following dependencies to your Gradle buidle file.
       implementation("aws.sdk.kotlin:s3:0.9.4-beta")
       implementation("aws.sdk.kotlin:rekognition:0.9.4-beta")
       implementation("commons-io:commons-io:2.10.0")
-      testImplementation("org.springframework.boot:spring-boot-starter-test")
+      testImplementation("org.springframework.boot:spring-boot-starter-spec")
      }
 
     tasks.withType<KotlinCompile> {

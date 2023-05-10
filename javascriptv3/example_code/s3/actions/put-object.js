@@ -12,7 +12,7 @@ const client = new S3Client({});
 
 export const main = async () => {
   const command = new PutObjectCommand({
-    Bucket: "test-bucket",
+    Bucket: "spec-bucket",
     Key: "hello-s3.txt",
     Body: "Hello S3!",
   });

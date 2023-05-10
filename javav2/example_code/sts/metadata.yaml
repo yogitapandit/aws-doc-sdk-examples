@@ -12,6 +12,6 @@ files:
  - path: src/main/java/com/example/sts/GetSessionToken.java
    services:
      - sts     
- - path: src/test/java/STSServiceTest.java
+ - path: src/spec/java/STSServiceTest.java
    services:
      - sts

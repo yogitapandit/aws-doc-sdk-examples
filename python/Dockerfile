@@ -10,4 +10,4 @@ CMD ["bash"]
 #   Windows:
 #     docker run -it --volume <user root>\.aws:/root/.aws <image ID>
 # Run all unit tests in the docker container:
-#   python -m python.test_tools.run_all_tests > test-run-$(date +"%Y-%m-%d").out
+#   python -m python.test_tools.run_all_tests > spec-run-$(date +"%Y-%m-%d").out

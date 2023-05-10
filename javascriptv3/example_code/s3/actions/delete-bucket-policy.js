@@ -13,7 +13,7 @@ const client = new S3Client({});
 // This will remove the policy from the bucket.
 export const main = async () => {
   const command = new DeleteBucketPolicyCommand({
-    Bucket: "test-bucket",
+    Bucket: "spec-bucket",
   });
 
   try {

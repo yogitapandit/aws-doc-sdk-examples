@@ -18,6 +18,6 @@ files:
  - path: src/main/java/com/example/ssm/ResolveOpsItem.java
    services:
      - ssm
- - path: src/test/java/AWSSSMIntegrationTest.java
+ - path: src/spec/java/AWSSSMIntegrationTest.java
    services:
      - ssm

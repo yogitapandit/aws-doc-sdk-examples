@@ -10,11 +10,11 @@ describe BucketEncryptionWrapper do
 
   it "confirms the encryption state was set" do
     client.stub_responses(:put_bucket_encryption)
-    expect(subject.set_encryption("test-bucket")).to be_eql(true)
+    expect(subject.set_encryption("spec-bucket")).to be_eql(true)
   end
 
   it "confirms error is caught when objects can't be listed" do
     client.stub_responses(:put_bucket_encryption, "TestError")
-    expect(subject.set_encryption("test-bucket")).to be_eql(false)
+    expect(subject.set_encryption("spec-bucket")).to be_eql(false)
   end
 end

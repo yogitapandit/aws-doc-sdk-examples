@@ -5,10 +5,10 @@ import { deleteAccountAlias } from "../actions/delete-account-alias.js";
 import { listAccountAliases } from "../actions/list-account-aliases.js";
 import { getUniqueName } from "libs/utils/util-string.js";
 
-describe("Account alias test", () => {
+describe("Account alias spec", () => {
   it("should create, read, and delete an account alias", async () => {
     // Create an account alias.
-    const accountAlias = getUniqueName("test-account-alias");
+    const accountAlias = getUniqueName("spec-account-alias");
     await createAccountAlias(accountAlias);
 
     // List account aliases.

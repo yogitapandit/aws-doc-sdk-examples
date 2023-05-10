@@ -21,7 +21,7 @@ files:
   - path: src/main/java/com/example/stepfunctions/StartExecution.java
     services:
       - stepfunctions
-  - path: src/test/java/StepFunctionsTest.java
+  - path: src/spec/java/StepFunctionsTest.java
     services:
       - stepfunctions
     

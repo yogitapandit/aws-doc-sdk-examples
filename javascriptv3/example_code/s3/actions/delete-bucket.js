@@ -13,7 +13,7 @@ const client = new S3Client({})
 // Delete a bucket.
 export const main = async () => {
   const command = new DeleteBucketCommand({
-    Bucket: "test-bucket",
+    Bucket: "spec-bucket",
   });
 
   try {

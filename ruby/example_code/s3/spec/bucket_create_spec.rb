@@ -11,17 +11,17 @@ describe BucketCreateWrapper do
 
   it "confirms the bucket was created" do
     bucket.client.stub_responses(:create_bucket)
-    expect(wrapper.create?("us-test-2")).to be_eql(true)
+    expect(wrapper.create?("us-spec-2")).to be_eql(true)
     expect(wrapper.bucket.name).to be_eql(bucket_name)
   end
 
   it "confirms error is caught when bucket can't be created" do
     bucket.client.stub_responses(:create_bucket, "TestError")
-    expect(wrapper.create?("us-test-2")).to be_eql(false)
+    expect(wrapper.create?("us-spec-2")).to be_eql(false)
   end
 
   it "confirms bucket location" do
-    loc = "us-test-2"
+    loc = "us-spec-2"
     stub_data = bucket.client.stub_data(:get_bucket_location, { location_constraint: loc })
     bucket.client.stub_responses(:get_bucket_location, stub_data)
     expect(wrapper.location).to be_eql(loc)

@@ -70,7 +70,7 @@ const smtpPassword = process.env["SMTP_PASSWORD"];
 var configurationSet = "ConfigSet";
 
 // The subject line of the email
-var subject = "Amazon Pinpoint test (Nodemailer)";
+var subject = "Amazon Pinpoint spec (Nodemailer)";
 
 // The email body for recipients with non-HTML email clients.
 var body_text = `Amazon Pinpoint Test (Nodemailer)

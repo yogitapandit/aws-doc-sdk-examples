@@ -35,18 +35,18 @@ describe "create user assume role scenario" do
 
     it "runs without errors" do
       iam_resource.client.stub_responses(:list_attached_role_policies, {
-        'attached_policies': [{'policy_name': "test-policy", 'policy_arn': "test-arn"}]
+        'attached_policies': [{'policy_name': "spec-policy", 'policy_arn': "spec-arn"}]
       })
       iam_resource.client.stub_responses(:list_user_policies, {
-        'policy_names': ["test-user-policy"]
+        'policy_names': ["spec-user-policy"]
       })
       iam_resource.client.stub_responses(:list_access_keys, {
-        'access_key_metadata': [{'access_key_id': "test-key-id"}]
+        'access_key_metadata': [{'access_key_id': "spec-key-id"}]
       })
       expectation = expect { run_scenario(scenario) }
       expectation.not_to output(/Something went wrong with the demo/).to_stdout
       expectation.to output(/Deleted policy/).to_stdout
-      expectation.to output(/Deleted user policy test-user-policy/).to_stdout
+      expectation.to output(/Deleted user policy spec-user-policy/).to_stdout
       expectation.to output(/Deleted access key/).to_stdout
     end
 

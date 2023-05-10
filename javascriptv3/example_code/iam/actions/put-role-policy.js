@@ -20,7 +20,7 @@ const examplePolicyDocument = JSON.stringify({
         "s3:ListBucket",
         "s3:ListMultipartUploadParts",
       ],
-      Resource: "arn:aws:s3:::some-test-bucket",
+      Resource: "arn:aws:s3:::some-spec-bucket",
     },
     {
       Sid: "VisualEditor1",

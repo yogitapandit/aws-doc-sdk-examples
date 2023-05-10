@@ -6,7 +6,7 @@ import { deletePolicy } from "../actions/delete-policy.js";
 
 describe("hello", () => {
   it("should list my local policies", async () => {
-    const policyName = getUniqueName("test-policy");
+    const policyName = getUniqueName("spec-policy");
     const { Policy } = await createPolicy(policyName);
 
     if (!Policy?.Arn) {

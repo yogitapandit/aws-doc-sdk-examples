@@ -17,8 +17,8 @@ describe("app functions", () => {
   const model = new TextractModel("test_token", Config);
   model.imageData = { base64Data: true };
 
-  Config.DefaultBucketName = "test-bucket";
-  Config.DefaultImageName = "test-image.png";
+  Config.DefaultBucketName = "spec-bucket";
+  Config.DefaultImageName = "spec-image.png";
 
   test("render with default props", () => {
     render(<App model={model} config={Config} />);

@@ -27,6 +27,6 @@ files:
  - path: src/main/java/com/example/route/UpdateHealthCheck.java
    services:
      - route 53
- - path: src/test/java/Route53Test.java
+ - path: src/spec/java/Route53Test.java
    services:
      - route 53

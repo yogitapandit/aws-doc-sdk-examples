@@ -30,7 +30,7 @@ const examplePolicy = JSON.stringify({
         "s3:ListBucket",
         "s3:ListMultipartUploadParts",
       ],
-      Resource: "arn:aws:s3:::test-bucket",
+      Resource: "arn:aws:s3:::spec-bucket",
     },
     {
       Sid: "VisualEditor1",
@@ -48,10 +48,10 @@ const examplePolicy = JSON.stringify({
   ],
 });
 
-describe("Role and policy test", () => {
+describe("Role and policy spec", () => {
   it("should create a role and a policy, list them, get role, attach them, and delete them", async () => {
     // Create role.
-    const roleName = getUniqueName("create-role-test");
+    const roleName = getUniqueName("create-role-spec");
     await createRole(roleName);
 
     await waitUntilRoleExists(
@@ -69,7 +69,7 @@ describe("Role and policy test", () => {
     expect(getRoleResponse.Role?.RoleName).toEqual(roleName);
 
     // Create policy.
-    const policyName = getUniqueName("create-policy-test");
+    const policyName = getUniqueName("create-policy-spec");
     await createPolicy(policyName);
 
     let policy = await findPolicy(policyName);
@@ -81,7 +81,7 @@ describe("Role and policy test", () => {
     const policyArn = policy?.Arn;
 
     // Attach inline policy to role.
-    const inlinePolicyName = getUniqueName("inline-policy-test");
+    const inlinePolicyName = getUniqueName("inline-policy-spec");
     await putRolePolicy(roleName, inlinePolicyName, examplePolicy);
     let foundInlinePolicyName = await findInlineRolePolicy(
       roleName,

@@ -44,9 +44,9 @@ jobs:
           args: --manifest-path rust_dev_preview/Cargo.toml -- -D warnings
       - uses: actions-rs/cargo@v1
         if: success() || failure()
-        name: cargo test
+        name: cargo spec
         with:
-          command: test
+          command: spec
           args: --manifest-path rust_dev_preview/Cargo.toml
         env:
-          APP_ENVIRONMENT: test
+          APP_ENVIRONMENT: spec

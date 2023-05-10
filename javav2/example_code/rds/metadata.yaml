@@ -21,6 +21,6 @@ files:
   - path: src/main/java/com/example/rds/RebootDBInstance.java
     services:
       - rds        
-  - path: src/test/java/AmazonRDSTest.java
+  - path: src/spec/java/AmazonRDSTest.java
     services:
       - rds

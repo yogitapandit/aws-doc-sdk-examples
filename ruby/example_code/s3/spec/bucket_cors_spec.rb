@@ -5,7 +5,7 @@ require "rspec"
 require_relative "../bucket_cors"
 
 describe BucketCorsWrapper do
-  let(:bucket_name) { "test-bucket" }
+  let(:bucket_name) { "spec-bucket" }
   let(:bucket_cors) { Aws::S3::BucketCors.new(bucket_name, stub_responses: true) }
   let(:wrapper) { BucketCorsWrapper.new(bucket_cors) }
 

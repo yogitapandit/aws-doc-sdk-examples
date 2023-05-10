@@ -62,7 +62,7 @@ function run_test {
 ###############################################################################
 # function test_failed
 #
-# This function is used to terminate a failed test and to warn the customer
+# This function is used to terminate a failed spec and to warn the customer
 # about possible undeleted resources that could incur costs to their account.
 ###############################################################################
 
@@ -125,7 +125,7 @@ RANDOM=$$
 #
 # This function generates a random file name with using the specified root
 # followed by 4 groups that each have 4 digits.
-# The default root name is "test"
+# The default root name is "spec"
 function generate_random_name {
 
     ROOTNAME="test"

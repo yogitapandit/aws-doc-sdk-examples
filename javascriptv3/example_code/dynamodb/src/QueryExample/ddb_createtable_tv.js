@@ -5,12 +5,12 @@ ABOUT THIS NODE.JS EXAMPLE:This sample is part of the SDK for JavaScript Develop
  https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/dynamodb-example-query-scan.html.
 
 Purpose:
-ddb_createtable_tv.test.js creates a table for creating a table for the match query example
+ddb_createtable_tv.spec.js creates a table for creating a table for the match query example
 https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/dynamodb-example-query-scan.html.
 
 
 Running the code:
-node ddb_createtable_tv.test.js
+node ddb_createtable_tv.spec.js
 */
 // snippet-start:[dynamodb.JavaScript.batch.CreateTableTVV3]
 // Import required AWS SDK clients and commands for Node.js

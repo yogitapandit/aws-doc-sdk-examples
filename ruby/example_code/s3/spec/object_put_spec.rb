@@ -5,7 +5,7 @@ require "rspec"
 require_relative "../object_put"
 
 describe ObjectPutWrapper do
-  let(:object) { Aws::S3::Object.new("test-bucket", "test-key", stub_responses: true) }
+  let(:object) { Aws::S3::Object.new("spec-bucket", "spec-key", stub_responses: true) }
   let(:wrapper) { ObjectPutWrapper.new(object) }
 
   it "confirms the object was put" do

@@ -21,4 +21,4 @@ gem "zip"
 gem "sinatra"
 gem 'sequel'
 gem 'rack'
-gem 'rack-test'
+gem 'rack-spec'

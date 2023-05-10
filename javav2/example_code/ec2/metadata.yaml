@@ -60,4 +60,4 @@ files:
   - path: src/main/java/com/example/ec2/TerminateInstance.java
     services:
       - ec2    
-  - path: src/test/java/AWSEC2ServiceIntegrationTest.java
+  - path: src/spec/java/AWSEC2ServiceIntegrationTest.java

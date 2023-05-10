@@ -11,7 +11,7 @@ import { getServerCertificate } from "../actions/get-server-certificate.js";
 describe("Server certificates", () => {
   it("should create, read, update, and delete server certificates", async () => {
     // Create a server certificate.
-    const certName = getUniqueName("test-cert");
+    const certName = getUniqueName("spec-cert");
     await uploadServerCertificate(certName);
 
     // List server certificates.
@@ -24,7 +24,7 @@ describe("Server certificates", () => {
     ).toEqual(certName);
 
     // Update the server certificate.
-    const newCertName = getUniqueName("test-cert");
+    const newCertName = getUniqueName("spec-cert");
     await updateServerCertificate(certName, newCertName);
     serverCertificate = await findServerCertificate(newCertName);
     expect(serverCertificate).toBeDefined();

@@ -18,10 +18,10 @@ describe "iam_wrapper usage demo" do
   end
 
   context "runs using stubs" do
-    role_name = "test-role"
-    policy_arn = "test-policy-arn"
-    group_name = "test-group"
-    saml_provider_arn = "test-saml-provider-arn"
+    role_name = "spec-role"
+    policy_arn = "spec-policy-arn"
+    group_name = "spec-group"
+    saml_provider_arn = "spec-saml-provider-arn"
     let(:iam_resource) { Aws::IAM::Resource.new(stub_responses: true) }
     let(:wrapper) { IamWrapper.new(iam_resource) }
 
@@ -30,16 +30,16 @@ describe "iam_wrapper usage demo" do
       allow(wrapper).to receive(:gets).and_return(*inputs)
       iam_resource.client.stub_responses(:list_roles, {
         'roles': [{
-                    'role_name': role_name, 'path': "test-path", 'role_id': "test-id",
-                    'arn': "test-arn", 'create_date': Time.now}]
+                    'role_name': role_name, 'path': "spec-path", 'role_id': "spec-id",
+                    'arn': "spec-arn", 'create_date': Time.now}]
       })
       iam_resource.client.stub_responses(:list_policies, {
         'policies': [{'arn': policy_arn}]
       })
       iam_resource.client.stub_responses(:list_groups, {
         'groups': [{
-                     'group_name': group_name, 'path': "test-path", 'group_id': "test-id",
-                     'arn': "test-arn", 'create_date': Time.now}]
+                     'group_name': group_name, 'path': "spec-path", 'group_id': "spec-id",
+                     'arn': "spec-arn", 'create_date': Time.now}]
       })
       iam_resource.client.stub_responses(:list_saml_providers, {
         'saml_provider_list': [{'arn': saml_provider_arn}]

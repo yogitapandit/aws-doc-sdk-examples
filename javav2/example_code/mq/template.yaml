@@ -16,4 +16,4 @@ Resources:
       # eg:
       #Policies:
       # - S3ReadPolicy:
-      #     BucketName: test-bucket
+      #     BucketName: spec-bucket

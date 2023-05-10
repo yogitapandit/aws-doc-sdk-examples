@@ -13,21 +13,21 @@ import { handler } from "../guide_supplements/guide-cdk-lambda-function.js";
 
 describe("guide-cdk-lambda-function", () => {
   it("should return a list of object names if S3 responds successfully", async () => {
-    process.env.BUCKET = "test-bucket";
+    process.env.BUCKET = "spec-bucket";
     mockSendFn.mockImplementationOnce(() =>
       Promise.resolve({
-        Contents: [{ Key: "test-key" }],
+        Contents: [{ Key: "spec-key" }],
       })
     );
 
     const response = await handler({ httpMethod: "GET", path: "/" });
 
     expect(response.statusCode).toBe(200);
-    expect(response.body).toEqual(["test-key"]);
+    expect(response.body).toEqual(["spec-key"]);
   });
 
   it("should return a 204 if the bucket is empty", async () => {
-    process.env.BUCKET = "test-bucket";
+    process.env.BUCKET = "spec-bucket";
     mockSendFn.mockImplementationOnce(() => Promise.resolve({ Contents: [] }));
 
     const response = await handler({ httpMethod: "GET", path: "/" });
@@ -38,7 +38,7 @@ describe("guide-cdk-lambda-function", () => {
   it("should return a 400 if there is no bucket name", async () => {
     process.env.BUCKET = undefined;
     mockSendFn.mockImplementationOnce(() =>
-      Promise.resolve({ Contents: [{ Key: "test-key" }] })
+      Promise.resolve({ Contents: [{ Key: "spec-key" }] })
     );
 
     const response = await handler({ httpMethod: "GET", path: "/" });

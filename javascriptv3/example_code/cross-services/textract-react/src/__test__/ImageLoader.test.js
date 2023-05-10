@@ -17,8 +17,8 @@ describe("rendering", () => {
   });
 
   test("bucket and image props", () => {
-    const bucket = "test-bucket";
-    const image = "test-image";
+    const bucket = "spec-bucket";
+    const image = "spec-image";
     render(<ImageLoader imageBucket={bucket} imageKey={image} />);
     expect(screen.getByRole("textbox", { name: /Bucket/i })).toHaveValue(
       bucket
@@ -27,7 +27,7 @@ describe("rendering", () => {
   });
 
   test("error message", () => {
-    const testError = "test error";
+    const testError = "spec error";
     render(<ImageLoader modelError={testError} />);
     expect(screen.getByText(testError)).toBeInTheDocument();
   });

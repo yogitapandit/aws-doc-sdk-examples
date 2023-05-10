@@ -6,7 +6,7 @@ require_relative "../scenario_getting_started"
 
 describe "getting started scenario" do
   after do
-    File.delete("download.test") if File.exist?("download.test")
+    File.delete("download.spec") if File.exist?("download.spec")
   end
 
   context "runs against AWS (integration tests)", integ: true do
@@ -15,7 +15,7 @@ describe "getting started scenario" do
       s3_resource = Aws::S3::Resource.new
       scenario = ScenarioGettingStarted.new(s3_resource)
       allow(scenario).to receive(:gets).and_return(
-        __FILE__, "y", "download.test", "y", "y"
+        __FILE__, "y", "download.spec", "y", "y"
       )
 
       expect { run_scenario(scenario) }.not_to output("Something went wrong with the demo!").to_stdout
@@ -25,7 +25,7 @@ describe "getting started scenario" do
   context "runs using stubs" do
     let(:s3_resource) { Aws::S3::Resource.new(stub_responses: true) }
     let(:scenario) { ScenarioGettingStarted.new(s3_resource) }
-    inputs = [__FILE__, "y", "download.test", "y", "y"]
+    inputs = [__FILE__, "y", "download.spec", "y", "y"]
 
     it "runs without errors" do
       allow(scenario).to receive(:gets).and_return(*inputs)

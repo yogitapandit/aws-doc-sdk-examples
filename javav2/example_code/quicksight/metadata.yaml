@@ -27,6 +27,6 @@ files:
   - path: src/main/java/com/example/quicksight/UpdateDashboard.java
     services:
       - quicksight
-  - path: src/test/java/QuickSightTest.java
+  - path: src/spec/java/QuickSightTest.java
     services:
       - quicksight      

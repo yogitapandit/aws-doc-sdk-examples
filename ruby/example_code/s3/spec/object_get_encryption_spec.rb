@@ -5,7 +5,7 @@ require "rspec"
 require_relative "../object_get_encryption"
 
 describe ObjectGetEncryptionWrapper do
-  let(:object) { Aws::S3::Object.new("test-bucket", "test-key", stub_responses: true) }
+  let(:object) { Aws::S3::Object.new("spec-bucket", "spec-key", stub_responses: true) }
   let(:wrapper) { ObjectGetEncryptionWrapper.new(object) }
 
   it "confirms the object encryption state was retrieved" do

@@ -54,10 +54,10 @@ describe("cognito-identity-provider actions", () => {
 
   it("should successfully interact with Cognito", async () => {
     expect.assertions(4);
-    poolId = await testCreateUserPool(getUniqueName("create-user-pool-test"));
+    poolId = await testCreateUserPool(getUniqueName("create-user-pool-spec"));
 
     await testCreateUserPoolClient(
-      getUniqueName("create-user-pool-test"),
+      getUniqueName("create-user-pool-spec"),
       poolId
     );
 

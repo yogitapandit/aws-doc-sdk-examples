@@ -14,7 +14,7 @@ const client = new S3Client({})
 // to explicitly allow cross-origin requests.
 export const main = async () => {
   const command = new PutBucketCorsCommand({
-    Bucket: "test-bucket",
+    Bucket: "spec-bucket",
     CORSConfiguration: {
       CORSRules: [
         {

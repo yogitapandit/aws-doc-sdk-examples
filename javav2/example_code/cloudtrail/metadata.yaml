@@ -24,6 +24,6 @@ files:
  - path: src/main/java/com/example/cloudtrail/StartLogging.java
    services:
      - cloudtrail
- - path: src/test/java/CloudTrailTest.java
+ - path: src/spec/java/CloudTrailTest.java
    services:
      - cloudtrail

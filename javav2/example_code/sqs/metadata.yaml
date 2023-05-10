@@ -21,4 +21,4 @@ files:
   - path: src/main/java/com/example/sqs/VisibilityTimeout.java
     services:
       - sqs
-  - path: src/test/java/SQSServiceIntegrationTest.java
+  - path: src/spec/java/SQSServiceIntegrationTest.java

@@ -57,4 +57,4 @@ files:
   - path: src/main/java/com/example/identitystore/UpdateUser.java
     services:
       - identitystore
-  - path: src/test/java/IdentitystoreServiceTest.java
+  - path: src/spec/java/IdentitystoreServiceTest.java

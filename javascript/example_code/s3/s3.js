@@ -28,7 +28,7 @@
 
 if (process.argv.length < 4) {
     console.log('Usage: node s3.js <the bucket name> <the AWS Region to use>\n' +
-      'Example: node s3.js my-test-bucket us-east-2');
+      'Example: node s3.js my-spec-bucket us-east-2');
     process.exit(1);
   }
 

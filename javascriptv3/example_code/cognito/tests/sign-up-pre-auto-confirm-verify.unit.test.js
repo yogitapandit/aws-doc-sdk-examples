@@ -11,7 +11,7 @@ describe("sign-up-pre-auto-confirm-verify", () => {
     const result = await handler({
       request: {
         userAttributes: {
-          email: "test@example.com",
+          email: "spec@example.com",
           phone_number: "555-555-5555",
         },
       },
@@ -20,7 +20,7 @@ describe("sign-up-pre-auto-confirm-verify", () => {
     expect(result).toEqual({
       request: {
         userAttributes: {
-          email: "test@example.com",
+          email: "spec@example.com",
           phone_number: "555-555-5555",
         },
       },

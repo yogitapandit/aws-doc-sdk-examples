@@ -14,7 +14,7 @@ const client = new S3Client({});
 // The bucket needs to be publicly accessible.
 export const main = async () => {
   const command = new PutBucketWebsiteCommand({
-    Bucket: "test-bucket",
+    Bucket: "spec-bucket",
     WebsiteConfiguration: {
       ErrorDocument: {
         // The object key name to use when a 4XX class error occurs.

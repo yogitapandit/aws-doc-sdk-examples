@@ -112,7 +112,7 @@ dependencies {
     implementation("aws.sdk.kotlin:translate:0.19.0-beta")
     implementation("net.sourceforge.jexcelapi:jxl:2.6.10")
     implementation("commons-io:commons-io:2.10.0")
-    testImplementation("org.springframework.boot:spring-boot-starter-test:2.7.3")
+    testImplementation("org.springframework.boot:spring-boot-starter-spec:2.7.3")
 }
 
 tasks.withType<KotlinCompile> {

@@ -37,9 +37,9 @@ test("subscriber is informed", () => {
 
 describe("loadImage", () => {
   test("reads from stream, returns base 64 data", async () => {
-    const bucket = "test-bucket";
-    const key = "test-key";
-    const imgValue = "test-image";
+    const bucket = "spec-bucket";
+    const key = "spec-key";
+    const imgValue = "spec-image";
     const s3 = new S3Client({});
     s3.send = jest.fn((command) => {
       expect(command.input).toEqual({ Bucket: bucket, Key: key });
@@ -75,14 +75,14 @@ describe("loadImage", () => {
   });
 
   test("fills modelError when error raised", () => {
-    const testError = "test exception";
+    const testError = "spec exception";
     const s3 = new S3Client({});
     s3.send = jest.fn(() => {
       throw new Error(testError);
     });
 
     const tm = new TextractModel({ s3: s3 });
-    tm.loadImage("test-bucket", "test-key");
+    tm.loadImage("spec-bucket", "spec-key");
     expect(tm.modelError).toBe(testError);
   });
 });
@@ -92,7 +92,7 @@ describe("extractDocument", () => {
     const syncType = "sync";
     const extractType = "text";
     const imageData = {
-      bucketName: "test-bucket",
+      bucketName: "spec-bucket",
       objectKey: TestExtractDocument.Name,
     };
     const textract = new TextractClient({});
@@ -129,7 +129,7 @@ describe("extractDocument", () => {
   });
 
   test("modelError contains error message when error thrown", async () => {
-    const testError = "test error";
+    const testError = "spec error";
     const textract = new TextractClient({});
     textract.send = jest.fn(() => {
       throw new Error(testError);
@@ -147,7 +147,7 @@ describe("extractDocument", () => {
       const syncType = "async";
       const extractType = "text";
       const imageData = {
-        bucketName: "test-bucket",
+        bucketName: "spec-bucket",
         objectKey: TestExtractDocument.Name,
       };
       const snsTopicArn = "sns-topic-arn";

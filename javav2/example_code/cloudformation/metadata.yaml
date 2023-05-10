@@ -12,6 +12,6 @@ files:
  - path: src/main/java/com/example/cloudformation/GetTemplate.java
    services:
      - cloudformation
- - path: src/test/java/CloudFormationTest.java
+ - path: src/spec/java/CloudFormationTest.java
    services:
      - cloudformation

@@ -9,6 +9,6 @@ files:
  - path: src/main/java/com/example/ses/SendMessageAttachment.java
    services:
      - ses
- - path: src/test/java/SESTest.java
+ - path: src/spec/java/SESTest.java
    services:
      - ses

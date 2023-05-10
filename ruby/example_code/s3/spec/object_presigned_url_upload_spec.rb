@@ -5,10 +5,10 @@ require "rspec"
 require_relative "../object_presigned_url_upload"
 
 describe "object_presigned_url_upload" do
-  let(:bucket) { Aws::S3::Bucket.new("test-bucket") }
+  let(:bucket) { Aws::S3::Bucket.new("spec-bucket") }
 
   it "confirms the presigned URL is created" do
-    url = get_presigned_url(bucket, "test-key")
+    url = get_presigned_url(bucket, "spec-key")
     expect(url).not_to be_nil
   end
 end

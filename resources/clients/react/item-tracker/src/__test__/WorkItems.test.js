@@ -113,7 +113,7 @@ describe("work items functions", () => {
   });
 
   test('handles send report click', async () => {
-    const email = "test@example.com";
+    const email = "spec@example.com";
     axios.get.mockResolvedValueOnce({data: []});
     axios.post.mockResolvedValueOnce();
     await act(async () => {render(<WorkItems />)});
@@ -125,7 +125,7 @@ describe("work items functions", () => {
   });
 
   test('handles error on send report click', async () => {
-    const email = "test@example.com";
+    const email = "spec@example.com";
     const error = "Test error!";
     axios.get.mockResolvedValueOnce({data: []});
     axios.post.mockRejectedValueOnce(new Error(error));

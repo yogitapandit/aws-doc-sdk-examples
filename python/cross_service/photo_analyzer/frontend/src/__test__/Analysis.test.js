@@ -18,7 +18,7 @@ describe("analysis module", () => {
 
   test('render with photo no labels', () => {
     let test_photo = {'name': 'test-photo'};
-    const test_url = 'test-url';
+    const test_url = 'spec-url';
 
     const jqdef = $.Deferred();
     $.get.mockImplementation((restUrl, fn) => {
@@ -40,7 +40,7 @@ describe("analysis module", () => {
 
   test('render with photo and labels', () => {
     let test_photo = {'name': 'test-photo'}
-    const test_url = 'test-url';
+    const test_url = 'spec-url';
 
     $.get.mockImplementation((restUrl, fn) => {
       if (restUrl.endsWith(test_photo.name)) {

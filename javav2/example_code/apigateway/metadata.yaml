@@ -24,6 +24,6 @@ files:
   - path: src/main/java/com/example/gateway/GetStages.java
     services:
       - apigateway
-  - path: src/test/java/APIGatewayTest.java
+  - path: src/spec/java/APIGatewayTest.java
     services:
       - apigateway    

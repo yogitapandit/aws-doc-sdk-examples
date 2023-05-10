@@ -14,7 +14,7 @@ describe("imageData props", () => {
     expect(screen.getByRole("img")).toBeInTheDocument();
   });
 
-  test("render with test image", () => {
+  test("render with spec image", () => {
     render(
       <ImageDisplay imageData={{ base64Data: "hi" }} shownPolygons={[]} />
     );

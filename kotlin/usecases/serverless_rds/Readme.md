@@ -168,7 +168,7 @@ dependencies {
     implementation("com.sun.mail:javax.mail:1.6.2")
     implementation("aws.sdk.kotlin:rdsdata:0.17.1-beta")
     implementation("aws.sdk.kotlin:ses:0.17.1-beta")
-    testImplementation("org.springframework.boot:spring-boot-starter-test:2.7.5")
+    testImplementation("org.springframework.boot:spring-boot-starter-spec:2.7.5")
 }
 
 tasks.withType<KotlinCompile> {

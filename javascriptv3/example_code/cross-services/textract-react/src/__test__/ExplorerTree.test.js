@@ -22,7 +22,7 @@ describe("extraction props", () => {
     expect(screen.getByRole("list")).toBeEmptyDOMElement();
   });
 
-  test("render with test extraction", () => {
+  test("render with spec extraction", () => {
     render(
       <ExplorerTree extraction={TestExtractDocument} shownPolygons={[]} />
     );
@@ -64,7 +64,7 @@ describe("extraction props", () => {
     expect(toggle).toHaveBeenCalledWith(
       "page1",
       "PAGE",
-      { test: "test geometry" },
+      { test: "spec geometry" },
       true
     );
   });

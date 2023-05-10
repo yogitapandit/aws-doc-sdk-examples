@@ -35,6 +35,6 @@ tool/cdk:
 tool/cloudformation:
   - cloudformation/**/*
 tool/integration-testing:
-  - test/**/*
+  - spec/**/*
 type/github-settings:
   - .github/**/*

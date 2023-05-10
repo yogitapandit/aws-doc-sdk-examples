@@ -21,7 +21,7 @@ files:
     - path: src/main/java/com/example/ecs/UpdateService.java
     services:
       - ecs
-  - path: src/test/java/EcsTest.java
+  - path: src/spec/java/EcsTest.java
     services:
       - ecs
     

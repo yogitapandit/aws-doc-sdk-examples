@@ -12,6 +12,6 @@ files:
  - path: src/main/java/com/example/dynamodbasync/DynamoDBAsyncListTables.java
    services:
      - dynamodb
- - path: src/test/java/DynamoDBAsyncTest.java
+ - path: src/spec/java/DynamoDBAsyncTest.java
    services:
      - dynamodb

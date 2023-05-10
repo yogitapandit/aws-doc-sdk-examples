@@ -72,9 +72,9 @@ files:
   - path: src/main/java/com/example/dynamodb/Issues.java
     services:
       - dynamodb
-  - path: src/test/java/DynamoDBTest.java
+  - path: src/spec/java/DynamoDBTest.java
     services:
       - dynamodb
-  - path: src/test/java/EnhancedClientTest.java
+  - path: src/spec/java/EnhancedClientTest.java
     services:
       - dynamodb     

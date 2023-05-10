@@ -13,7 +13,7 @@ const client = new S3Client({})
 // Disable static website hosting on the bucket.
 export const main = async () => {
   const command = new DeleteBucketWebsiteCommand({
-    Bucket: "test-bucket",
+    Bucket: "spec-bucket",
   });
 
   try {

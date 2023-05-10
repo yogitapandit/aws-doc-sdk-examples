@@ -12,8 +12,8 @@ const client = new S3Client({});
 
 export const main = async () => {
   const command = new DeleteObjectCommand({
-    Bucket: "test-bucket",
-    Key: "test-key.txt",
+    Bucket: "spec-bucket",
+    Key: "spec-key.txt",
   });
 
   try {

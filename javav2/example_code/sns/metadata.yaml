@@ -69,6 +69,6 @@ files:
   - path: src/main/java/com/example/sns/UseMessageFilterPolicy.java
     services:
       - sns
-  - path: src/test/java/AWSSNSTest.java
+  - path: src/spec/java/AWSSNSTest.java
     services:
       - sns

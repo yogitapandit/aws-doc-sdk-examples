@@ -4,7 +4,7 @@
 require_relative "../ec2-ruby-example-create-key-pair"
 
 describe "#key_pair_created?" do
-  let(:key_pair_name) { "delete-this-key-pair--only-a-test" }
+  let(:key_pair_name) { "delete-this-key-pair--only-a-spec" }
   let(:ec2_client) do
 
     Aws::EC2::Client.new(

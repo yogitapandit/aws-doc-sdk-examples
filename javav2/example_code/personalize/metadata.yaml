@@ -33,6 +33,6 @@ files:
  - path: src/main/java/com/example/personalize/ListSolutions.java
    services:
      - personalize     
- - path: src/test/java/PersonalizeTest.java
+ - path: src/spec/java/PersonalizeTest.java
    services:
      - personalize

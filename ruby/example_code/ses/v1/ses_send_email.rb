@@ -21,11 +21,11 @@ recipient = "recipient@example.com"
 #   configsetname = "ConfigSet"
 
 # The subject line for the email.
-subject = "Amazon SES test (AWS SDK for Ruby)"
+subject = "Amazon SES spec (AWS SDK for Ruby)"
 
 # The HTML body of the email.
 htmlbody =
-  "<h1>Amazon SES test (AWS SDK for Ruby)</h1>"\
+  "<h1>Amazon SES spec (AWS SDK for Ruby)</h1>"\
   '<p>This email was sent with <a href="https://aws.amazon.com/ses/">'\
   'Amazon SES</a> using the <a href="https://aws.amazon.com/sdk-for-ruby/">'\
   "AWS SDK for Ruby</a>."
