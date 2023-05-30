@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Recursive function to navigate through subdirectories
+# Recursive function to navigate sub-directories
 run_mvn_tests() {
   for dir in "$1"/*/; do
     if [[ -f "$dir/pom.xml" ]]; then
@@ -8,15 +8,15 @@ run_mvn_tests() {
       (cd "$dir" && mvn test)
     fi
     if [[ -d "$dir" ]]; then
-      run_mvn_tests "$dir"  # Recursively call the function for subdirectories
+      run_mvn_tests "$dir"  # Recursively call function for sub-directories
     fi
   done
 }
 
-# Main script
+# Root directory
 root_dir="example_code"
 
-# Check if the root directory exists
+# Error if the root directory exists
 if [[ ! -d "$root_dir" ]]; then
   echo "Root directory $root_dir does not exist!"
   exit 1
@@ -24,5 +24,5 @@ fi
 
 echo "Starting mvn tests..."
 run_mvn_tests "$root_dir"
-echo "All mvn tests completed."
+echo "mvn tests completed."
 
