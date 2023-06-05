@@ -14,8 +14,16 @@ glue_Hello:
             - description:
               snippet_tags:
                 - Glue.dotnetv3.HelloGlue
+    Rust:
+      versions:
+        - sdk_version: 1
+          github: rust_dev_preview/glue
+          excerpts:
+            - description:
+              snippet_tags:
+                - rust.glue.list_jobs
   services:
-    glue: {ListJobs}
+    glue: { ListJobs }
 glue_GetCrawler:
   title: Get an &GLU; crawler using an &AWS; SDK
   title_abbrev: Get a crawler
@@ -95,7 +103,7 @@ glue_GetCrawler:
               snippet_tags:
                 - rust.glue.get_crawler
   services:
-    glue: {GetCrawler}
+    glue: { GetCrawler }
 glue_CreateCrawler:
   title: Create an &GLU; crawler using an &AWS; SDK
   title_abbrev: Create a crawler
@@ -177,7 +185,7 @@ glue_CreateCrawler:
               snippet_tags:
                 - rust.glue.create_crawler
   services:
-    glue: {CreateCrawler}
+    glue: { CreateCrawler }
 glue_StartCrawler:
   title: Start an &GLU; crawler using an &AWS; SDK
   title_abbrev: Start a crawler
@@ -259,7 +267,7 @@ glue_StartCrawler:
               snippet_tags:
                 - rust.glue.start_crawler
   services:
-    glue: {StartCrawler}
+    glue: { StartCrawler }
 glue_GetDatabase:
   title: Get a database from the &GLUDCLong; using an &AWS; SDK
   title_abbrev: Get a database from the &GLUDC;
@@ -340,7 +348,7 @@ glue_GetDatabase:
               snippet_tags:
                 - rust.glue.get_database
   services:
-    glue: {GetDatabase}
+    glue: { GetDatabase }
 glue_GetTables:
   title: Get tables from a database in the &GLUDCLong; using an &AWS; SDK
   title_abbrev: Get tables from a database
@@ -412,7 +420,7 @@ glue_GetTables:
               snippet_tags:
                 - rust.glue.get_tables
   services:
-    glue: {GetTables}
+    glue: { GetTables }
 glue_CreateJob:
   title: Create an &GLU; job definition using an &AWS; SDK
   title_abbrev: Create a job definition
@@ -476,7 +484,7 @@ glue_CreateJob:
               snippet_tags:
                 - rust.glue.create_job
   services:
-    glue: {CreateJob}
+    glue: { CreateJob }
 glue_StartJobRun:
   title: Start an &GLU; job run using an &AWS; SDK
   title_abbrev: Start a job run
@@ -541,7 +549,7 @@ glue_StartJobRun:
               snippet_tags:
                 - rust.glue.start_job_run
   services:
-    glue: {StartJobRun}
+    glue: { StartJobRun }
 glue_ListJobs:
   title: List &GLU; job definitions using an &AWS; SDK
   title_abbrev: List job definitions
@@ -602,7 +610,7 @@ glue_ListJobs:
               snippet_tags:
                 - rust.glue.list_jobs
   services:
-    glue: {ListJobs}
+    glue: { ListJobs }
 glue_GetJobRuns:
   title: Get runs of an &GLU; job using an &AWS; SDK
   title_abbrev: Get runs of a job
@@ -657,7 +665,7 @@ glue_GetJobRuns:
                 - cpp.example_code.glue.glue_client
                 - cpp.example_code.glue.get_job_runs
   services:
-    glue: {GetJobRuns}
+    glue: { GetJobRuns }
 glue_GetJobRun:
   title: Get an &GLU; job run using an &AWS; SDK
   title_abbrev: Get a job run
@@ -720,7 +728,7 @@ glue_GetJobRun:
               snippet_tags:
                 - rust.glue.get_job_run
   services:
-    glue: {GetJobRun}
+    glue: { GetJobRun }
 glue_DeleteJob:
   title: Delete an &GLU; job definition using an &AWS; SDK
   title_abbrev: Delete a job definition
@@ -782,7 +790,7 @@ glue_DeleteJob:
               snippet_tags:
                 - rust.glue.delete_job
   services:
-    glue: {DeleteJob}
+    glue: { DeleteJob }
 glue_DeleteTable:
   title: Delete a table from an &GLUDCLong; database using an &AWS; SDK
   title_abbrev: Delete a table from a database
@@ -833,7 +841,7 @@ glue_DeleteTable:
               snippet_tags:
                 - rust.glue.delete_table
   services:
-    glue: {DeleteTable}
+    glue: { DeleteTable }
 glue_DeleteDatabase:
   title: Delete a database from the &GLUDCLong; using an &AWS; SDK
   title_abbrev: Delete a database from the &GLUDC;
@@ -895,7 +903,7 @@ glue_DeleteDatabase:
               snippet_tags:
                 - rust.glue.delete_database
   services:
-    glue: {DeleteDatabase}
+    glue: { DeleteDatabase }
 glue_DeleteCrawler:
   title: Delete an &GLU; crawler using an &AWS; SDK
   title_abbrev: Delete a crawler
@@ -957,7 +965,7 @@ glue_DeleteCrawler:
               snippet_tags:
                 - rust.glue.delete_crawler
   services:
-    glue: {DeleteCrawler}
+    glue: { DeleteCrawler }
 glue_GetDatabases:
   title: Get database list from the &GLUDCLong; using an &AWS; SDK
   title_abbrev: Get databases from the &GLUDC;
@@ -973,7 +981,7 @@ glue_GetDatabases:
               snippet_tags:
                 - javascript.v3.glue.actions.GetDatabases
   services:
-    glue: {GetDatabases}
+    glue: { GetDatabases }
 glue_GetJob:
   title: Get a job from the &GLUDCLong; using an &AWS; SDK
   title_abbrev: Get job from the &GLUDC;
@@ -989,7 +997,7 @@ glue_GetJob:
               snippet_tags:
                 - javascript.v3.glue.actions.GetJob
   services:
-    glue: {GetJob}
+    glue: { GetJob }
 glue_Scenario_GetStartedCrawlersJobs:
   title: Get started running &GLU; crawlers and jobs using an &AWS; SDK
   title_abbrev: Get started with crawlers and jobs
@@ -997,7 +1005,7 @@ glue_Scenario_GetStartedCrawlersJobs:
     - Create a crawler that crawls a public &S3; bucket and generates
       a database of CSV-formatted metadata.
     - List information about databases and tables in your &GLUDCLong;.
-    - Create a job to extract CSV data from the S3 bucket, transform the data, and 
+    - Create a job to extract CSV data from the S3 bucket, transform the data, and
       load JSON-formatted output into another S3 bucket.
     - List information about job runs, view transformed data, and clean up resources.
   category: Scenarios
