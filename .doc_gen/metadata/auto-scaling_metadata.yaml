@@ -22,8 +22,16 @@ auto-scaling_Hello:
             - description:
               snippet_tags:
                 - php.example_code.auto-scaling.basics.helloService
+    Rust:
+      versions:
+        - sdk_version: 1
+          github: rust/example_code/autoscaling
+          excerpts:
+            - description:
+              snippet_tags:
+                - autoscaling.rust.list-autoscaling-groups
   services:
-    auto-scaling: {DescribeAutoScalingGroups}
+    auto-scaling: { DescribeAutoScalingGroups }
 auto-scaling_CreateAutoScalingGroup:
   title: Create an &AS; group using an &AWS; SDK
   title_abbrev: Create a group
@@ -91,7 +99,7 @@ auto-scaling_CreateAutoScalingGroup:
                 - cpp.example_code.autoscaling.create_autoscaling_group1
                 - cpp.example_code.autoscaling.create_autoscaling_group2
   services:
-    auto-scaling: {CreateAutoScalingGroup}
+    auto-scaling: { CreateAutoScalingGroup }
 auto-scaling_DeleteAutoScalingGroup:
   title: Delete an &AS; group using an &AWS; SDK
   title_abbrev: Delete a group
@@ -158,7 +166,7 @@ auto-scaling_DeleteAutoScalingGroup:
                 - cpp.example_code.autoscaling.autoscaling_client
                 - cpp.example_code.autoscaling.delete_autoscaling_group
   services:
-    auto-scaling: {DeleteAutoScalingGroup}
+    auto-scaling: { DeleteAutoScalingGroup }
 auto-scaling_DescribeAutoScalingGroups:
   title: Get information about &AS; groups using an &AWS; SDK
   title_abbrev: Get information about groups
@@ -225,7 +233,7 @@ auto-scaling_DescribeAutoScalingGroups:
                 - cpp.example_code.autoscaling.autoscaling_client
                 - cpp.example_code.autoscaling.describe_autoscaling_group
   services:
-    auto-scaling: {DescribeAutoScalingGroups}
+    auto-scaling: { DescribeAutoScalingGroups }
 auto-scaling_UpdateAutoScalingGroup:
   title: Update an &AS; group using an &AWS; SDK
   title_abbrev: Update a group
@@ -293,7 +301,7 @@ auto-scaling_UpdateAutoScalingGroup:
                 - cpp.example_code.autoscaling.update_autoscaling_group1
                 - cpp.example_code.autoscaling.update_autoscaling_group2
   services:
-    auto-scaling: {UpdateAutoScalingGroup}
+    auto-scaling: { UpdateAutoScalingGroup }
 auto-scaling_TerminateInstanceInAutoScalingGroup:
   title: Terminate an instance in an &AS; group using an &AWS; SDK
   title_abbrev: Terminate an instance in a group
@@ -355,7 +363,7 @@ auto-scaling_TerminateInstanceInAutoScalingGroup:
                 - cpp.example_code.autoscaling.terminate_instance_autoscaling_group1
                 - cpp.example_code.autoscaling.terminate_instance_autoscaling_group2
   services:
-    auto-scaling: {TerminateInstanceInAutoScalingGroup}
+    auto-scaling: { TerminateInstanceInAutoScalingGroup }
 auto-scaling_SetDesiredCapacity:
   title: Set the desired capacity of an &AS; group using an &AWS; SDK
   title_abbrev: Set the desired capacity of a group
@@ -417,7 +425,7 @@ auto-scaling_SetDesiredCapacity:
                 - cpp.example_code.autoscaling.set_desired_capacity1
                 - cpp.example_code.autoscaling.set_desired_capacity2
   services:
-    auto-scaling: {SetDesiredCapacity}
+    auto-scaling: { SetDesiredCapacity }
 auto-scaling_DescribeAutoScalingInstances:
   title: Get information about &AS; instances using an &AWS; SDK
   title_abbrev: Get information about instances
@@ -479,7 +487,7 @@ auto-scaling_DescribeAutoScalingInstances:
                 - cpp.example_code.autoscaling.describe_autoscaling_instances1
                 - cpp.example_code.autoscaling.describe_autoscaling_instances2
   services:
-    auto-scaling: {DescribeAutoScalingInstances}
+    auto-scaling: { DescribeAutoScalingInstances }
 auto-scaling_DescribeScalingActivities:
   title: Get information about &AS; activities using an &AWS; SDK
   title_abbrev: Get information about scaling activities
@@ -541,7 +549,7 @@ auto-scaling_DescribeScalingActivities:
                 - cpp.example_code.autoscaling.describe_scaling_activities1
                 - cpp.example_code.autoscaling.describe_scaling_activities2
   services:
-    auto-scaling: {DescribeScalingActivities}
+    auto-scaling: { DescribeScalingActivities }
 auto-scaling_EnableMetricsCollection:
   title: Enable &CW; metrics collection for an &AS; group using an &AWS; SDK
   title_abbrev: Enable metrics collection for a group
@@ -554,7 +562,7 @@ auto-scaling_EnableMetricsCollection:
           github: kotlin/services/autoscale
           excerpts:
             - description:
-              snippet_tags: 
+              snippet_tags:
                 - autoscale.kotlin.enable_collection.main
     Java:
       versions:
@@ -603,7 +611,7 @@ auto-scaling_EnableMetricsCollection:
                 - cpp.example_code.autoscaling.enable_metrics_collection1
                 - cpp.example_code.autoscaling.enable_metrics_collection2
   services:
-    auto-scaling: {EnableMetricsCollection}
+    auto-scaling: { EnableMetricsCollection }
 auto-scaling_DisableMetricsCollection:
   title: Disable &CW; metrics collection for an &AS; group using an &AWS; SDK
   title_abbrev: Disable metrics collection for a group
@@ -616,7 +624,7 @@ auto-scaling_DisableMetricsCollection:
           github: kotlin/services/autoscale
           excerpts:
             - description:
-              snippet_tags: 
+              snippet_tags:
                 - autoscale.kotlin.disable_collection.main
     Java:
       versions:
@@ -665,7 +673,7 @@ auto-scaling_DisableMetricsCollection:
                 - cpp.example_code.autoscaling.disable_metrics_collection1
                 - cpp.example_code.autoscaling.disable_metrics_collection2
   services:
-    auto-scaling: {DisableMetricsCollection}
+    auto-scaling: { DisableMetricsCollection }
 auto-scaling_Scenario_GroupsAndInstances:
   title: Manage &AS; groups and instances using an &AWS; SDK
   title_abbrev: Manage groups and instances
@@ -706,7 +714,7 @@ auto-scaling_Scenario_GroupsAndInstances:
           excerpts:
             - description:
               snippet_tags:
-                - autoscale.kotlin.create_scaling_scenario.main 
+                - autoscale.kotlin.create_scaling_scenario.main
     Java:
       versions:
         - sdk_version: 2
@@ -715,7 +723,7 @@ auto-scaling_Scenario_GroupsAndInstances:
           excerpts:
             - description:
               snippet_tags:
-                - autoscale.java2.create_scaling_scenario.main  
+                - autoscale.java2.create_scaling_scenario.main
     PHP:
       versions:
         - sdk_version: 3
@@ -747,7 +755,16 @@ auto-scaling_Scenario_GroupsAndInstances:
               snippet_tags:
                 - cpp.example_code.autoscaling.groups_and_instances_scenario
   services:
-    auto-scaling: {CreateAutoScalingGroup, DeleteAutoScalingGroup, DisableMetricsCollection,
-                   EnableMetricsCollection, DescribeAutoScalingGroups, DescribeAutoScalingInstances,
-                   DescribeScalingActivities, SetDesiredCapacity, TerminateInstanceInAutoScalingGroup,
-                   UpdateAutoScalingGroup}
+    auto-scaling:
+      {
+        CreateAutoScalingGroup,
+        DeleteAutoScalingGroup,
+        DisableMetricsCollection,
+        EnableMetricsCollection,
+        DescribeAutoScalingGroups,
+        DescribeAutoScalingInstances,
+        DescribeScalingActivities,
+        SetDesiredCapacity,
+        TerminateInstanceInAutoScalingGroup,
+        UpdateAutoScalingGroup,
+      }
