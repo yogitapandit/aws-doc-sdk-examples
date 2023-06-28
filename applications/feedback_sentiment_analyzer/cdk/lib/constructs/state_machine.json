@@ -1,0 +1,117 @@
+{
+  "Comment": "A description of my state machine",
+  "StartAt": "ExtractText",
+  "States": {
+    "ExtractText": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "ResultPath": "$.extracted_text",
+      "Parameters": {
+        "Payload.$": "$",
+        "FunctionName": "arn:aws:lambda:us-east-1::function:ExtractText:$LATEST"
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException",
+            "Lambda.TooManyRequestsException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 6,
+          "BackoffRate": 2
+        }
+      ],
+      "Next": "AnalyzeSentiment"
+    },
+    "AnalyzeSentiment": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "InputPath": "$.extracted_text",
+      "ResultPath": "$.sentiment_analysis",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us-east-1::function:AnalyzeSentiment:$LATEST",
+        "Payload.$": "$"
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException",
+            "Lambda.TooManyRequestsException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 6,
+          "BackoffRate": 2
+        }
+      ],
+      "Next": "TranslateText"
+    },
+    "TranslateText": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "ResultPath": "$.translated_text",
+      "Parameters": {
+        "Payload.$": "$",
+        "FunctionName": "arn:aws:lambda:us-east-1::function:TranslateText:$LATEST"
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException",
+            "Lambda.TooManyRequestsException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 6,
+          "BackoffRate": 2
+        }
+      ],
+      "Next": "SynthesizeAudio"
+    },
+    "SynthesizeAudio": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "InputPath": "$",
+      "ResultPath": "$.synthesized_audio",
+      "Parameters": {
+        "Payload.$": "$",
+        "FunctionName": "arn:aws:lambda:us-east-1::function:SynthesizeAudio:$LATEST"
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException",
+            "Lambda.TooManyRequestsException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 7,
+          "BackoffRate": 2
+        }
+      ],
+      "Next": "CreateFullComment"
+    },
+    "CreateFullComment": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::dynamodb:putItem",
+      "InputPath": "$",
+      "Parameters": {
+        "TableName": "comment",
+        "Item": {
+          "comment_key.$": "$.detail.object.key",
+          "source_text.$": "$.extracted_text.Payload",
+          "sentiment.$": "$.sentiment_analysis.Payload['sentiment']",
+          "translated_text.$": "$.translated_text.Payload.translated_text",
+          "source_language.$": "$.translated_text.Payload.source_language_code",
+          "audio_key.$": "$.synthesized_audio.Payload"
+        }
+      },
+      "End": true
+    }
+  }
+}

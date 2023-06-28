@@ -22,7 +22,7 @@ def lambda_handler(event:, context:)
     document_location: {
       s3_object: {
         bucket: s3_bucket,
-        name: 'pix/comment.png'
+        name: event['detail']['object']['key']
       }
     },
     notification_channel: {
@@ -53,9 +53,6 @@ def lambda_handler(event:, context:)
     if obj.block_type.include?('LINE')
       if obj.respond_to?(:text) && obj.text
         extracted_words.append(obj.text)
-        if obj.include?('RAVISSANT')
-          puts obj.to_s
-        end
       end
     end
   end

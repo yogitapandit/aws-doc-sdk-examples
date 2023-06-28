@@ -13,8 +13,8 @@ def lambda_handler(event:, context:)
   client = Aws::Translate::Client.new(region: "us-east-1")
 
   client.translate_text({
-                          text: event['Payload'], # required
-                          source_language_code: "fr", # required
-                          target_language_code: "en", # required
+                          text: event['extracted_text']['Payload'], # required
+                          source_language_code: event['sentiment_analysis']['Payload']['language_code'], # required
+                          target_language_code: 'en'
                         })
 end

@@ -29,5 +29,5 @@ def lambda_handler(event:, context:)
   logger.info("Sentiment: #{response.sentiment}")
   logger.info("Sentiment Score: #{response.sentiment_score}")
 
-  response.sentiment
+  { "sentiment" => response.sentiment, "language_code" => language_code }
 end
