@@ -25,7 +25,10 @@ def lambda_handler(event:, context:)
 
   # Define the bucket name and file name for the MP3 file in S3
   bucket_name = event['detail']['bucket']['name']
-  key = "#{event["id"]}/recording.mp3"
+  comment_key = event['detail']['object']['key']
+  prefix = comment_key.split('/')[0]
+
+  key = "#{prefix}/recording.mp3"
 
   s3_client = Aws::S3::Client.new(region: "us-east-1")
 
